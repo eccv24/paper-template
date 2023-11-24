@@ -9,6 +9,10 @@
 % TODO FINAL: Un-comment the following line for the camera-ready version
 %\usepackage{eccv}
 
+% OPTIONAL: Un-comment the following line for a version which is easier to read
+% on small portrait-orientation screens (e.g. mobile phones, or beside other windows)
+%\usepackage[mobile]{eccv}
+
 
 % ---------------------------------------------------------------
 % Other packages
@@ -241,7 +245,7 @@ An example of an acceptable paper:
 If you are making a submission to another conference at the same time, which covers similar or overlapping material, you may need to refer to that submission in order to explain the differences, just as you would if you had previously published related work.
 In such cases, include the anonymized parallel submission~\cite{Authors14} as supplemental material and cite it as
 \begin{quote}
-  [1] Authors. ``The frobnicatable foo filter'', BMVS 2014 Submission ID 324, Supplied as supplemental material {\tt bmvc324.pdf}.
+  [1] Authors. ``The frobnicatable foo filter'', ECCV \ECCVyear Submission ID 1394, Supplied as supplemental material {\tt eccv1394.pdf}.
 \end{quote}
 
 Finally, you may feel you need to tell the reader that more details can be found elsewhere, and refer them to a technical report.
@@ -399,9 +403,10 @@ Just because you did not refer to it in the text does not mean some future reade
 It is cumbersome to have to use circumlocutions like ``the equation second from the top of page 3 column 1''.
 (Note that the ruler will not be present in the final copy, so is not an alternative to equation numbers).
 All authors will benefit from reading Mermin's description of how to write mathematics:
-\url{http://www.pamitc.org/documents/mermin.pdf}.
+\url{http://www.ai.mit.edu/courses/6.899/papers/mermin.pdf}.
 
-Equations should never be in color and should be punctuated in the same way as ordinary text. 
+% No color equations in Springer publications.
+Equations should never be in color and should be punctuated in the same way as ordinary text.
 They should not be pasted in as figures.
 
 
@@ -478,7 +483,8 @@ The space after \eg, meaning ``for example'', should not be a sentence-ending sp
 So \eg is correct, {\em e.g.} is not.
 The provided \verb'\eg' macro takes care of this.
 
-When citing a multi-author paper, you may save space by using ``et alia'', shortened to ``\etal'' (not ``{\em et.\ al.}'' as ``{\em et}'' is a complete word).
+When citing a multi-author paper, you may save space by using ``et alia'', 
+shortened to ``\etal'' (not ``{\em et.\ al.}'' as ``{\em et\hskip 0.1em}'' is a complete word).
 If you use the \verb'\etal' macro provided, then you need not worry about double periods when used at the end of a sentence as in Alpher \etal.
 However, use it only when there are three or more authors.
 Thus, the following is correct:
