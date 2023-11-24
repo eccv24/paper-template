@@ -24,6 +24,7 @@
 % "options" include
 %  * "review" for submitting a paper for review and
 %  * "final" for the camera ready (default).
+%  * "mobile" for camera ready on small-screen devices
 %  * "year=20??" allows to specify the conference year (default current year).
 %  * "ID=12345" allows to specify the paper ID (default `none').
 %
@@ -54,6 +55,9 @@
 \RequirePackage{amsmath}                 % Need AMS packages to bug fix 
 \RequirePackage{amssymb}                 %   line numbers in equations
 \RequirePackage{cite}                    % Sort citations
+\RequirePackage{xspace}  
+
+\usepackage[a4paper]{geometry}
 
 % Breaking lines for URLs in the bib
 \RequirePackage[hyphens]{url}
@@ -80,6 +84,7 @@
 
 \DeclareBoolOption{review}
 \DeclareComplementaryOption{final}{review}
+\DeclareBoolOption{mobile}
 \DeclareStringOption[\the\year]{year}
 \DeclareStringOption[none]{ID}
 \DeclareDefaultOption{\PackageWarning{eccv}{Unkown option `\CurrentOption'}}
@@ -216,7 +221,7 @@
   }
 
   % Crop the page for review version
-  \usepackage[width=122mm,left=12mm,paperwidth=146mm,height=193mm,top=12mm,paperheight=217mm]{geometry}
+  \geometry{width=122mm,left=12mm,paperwidth=146mm,height=193mm,top=12mm,paperheight=217mm}
 
   % Replace authors, institute, and running title with review placeholders
   \let\maketitleold\maketitle
@@ -227,8 +232,13 @@
                             \maketitleold}
 \fi
 
+\ifeccv@mobile
+  % Crop the page for mobile version
+  \geometry{width=122mm,left=12mm,paperwidth=146mm,height=193mm,top=12mm,paperheight=217mm}
+\fi
+
 % Macro for ECCV year in main text
-\newcommand{\ECCVyear}{\eccv@year}
+\newcommand{\ECCVyear}{\eccv@year\xspace}
 \makeatother
 
 
