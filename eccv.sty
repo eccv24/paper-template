@@ -57,8 +57,6 @@
 \RequirePackage{cite}                    % Sort citations
 \RequirePackage{xspace}  
 
-\usepackage[a4paper]{geometry}
-
 % Breaking lines for URLs in the bib
 \RequirePackage[hyphens]{url}
 \Urlmuskip=0mu plus 1mu\relax
@@ -221,7 +219,7 @@
   }
 
   % Crop the page for review version
-  \geometry{width=122mm,left=12mm,paperwidth=146mm,height=193mm,top=12mm,paperheight=217mm}
+  \RequirePackage[width=122mm,left=12mm,paperwidth=146mm,height=193mm,top=12mm,paperheight=217mm]{geometry}
 
   % Replace authors, institute, and running title with review placeholders
   \let\maketitleold\maketitle
@@ -234,7 +232,7 @@
 
 \ifeccv@mobile
   % Crop the page for mobile version
-  \geometry{width=122mm,left=12mm,paperwidth=146mm,height=193mm,top=12mm,paperheight=217mm}
+  \RequirePackage[width=122mm,left=12mm,paperwidth=146mm,height=193mm,top=12mm,paperheight=217mm]{geometry}
 \fi
 
 % Macro for ECCV year in main text
