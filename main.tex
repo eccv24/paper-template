@@ -1,0 +1,650 @@
+\documentclass[runningheads]{llncs}
+
+% ---------------------------------------------------------------
+% Include basic ECCV package
+ 
+% TODO REVIEW: Insert your submission number below by replacing '*****'
+% TODO FINAL: Comment out the following line for the camera-ready version
+\usepackage[review,year=2024,ID=*****]{eccv}
+% TODO FINAL: Un-comment the following line for the camera-ready version
+%\usepackage{eccv}
+
+
+% ---------------------------------------------------------------
+% Other packages
+
+% Commonly used abbreviations (\eg, \ie, \etc, \cf, \etal, etc.)
+\usepackage{eccvabbrv}
+
+% Include other packages here, before hyperref.
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+% The "axessiblity" package can be found at: https://ctan.org/pkg/axessibility?lang=en
+\usepackage[accsupp]{axessibility}  % Improves PDF readability for those with disabilities.
+
+
+% ---------------------------------------------------------------
+% Hyperref package
+
+% It is strongly recommended to use hyperref, especially for the review version.
+% Please disable hyperref *only* if you encounter grave issues.
+% hyperref with option pagebackref eases the reviewers' job, but should be disabled for the final version.
+%
+% If you comment hyperref and then uncomment it, you should delete
+% main.aux before re-running LaTeX.
+% (Or just hit 'q' on the first LaTeX run, let it finish, and you
+%  should be clear).
+
+% TODO FINAL: Comment out the following line for the camera-ready version
+\usepackage[pagebackref,breaklinks,colorlinks]{hyperref}
+% TODO FINAL: Un-comment the following line for the camera-ready version
+%\usepackage{hyperref}
+
+% Support for ORCID icon
+\usepackage{orcidlink}
+
+
+\begin{document}
+
+% ---------------------------------------------------------------
+% TODO REVIEW: Replace with your title
+\title{Author Guidelines for ECCV Submission} 
+
+% TODO REVIEW: If the paper title is too long for the running head, you can set
+% an abbreviated paper title here. If not, comment out.
+\titlerunning{Abbreviated paper title}
+
+% TODO FINAL: Replace with your author list. 
+% Include the authors' OCRID for the camera-ready version, if at all possible.
+\author{First Author\inst{1}\orcidlink{0000-1111-2222-3333} \and
+Second Author\inst{2,3}\orcidlink{1111-2222-3333-4444} \and
+Third Author\inst{3}\orcidlink{2222--3333-4444-5555}}
+
+% TODO FINAL: Replace with an abbreviated list of authors.
+\authorrunning{F.~Author et al.}
+% First names are abbreviated in the running head.
+% If there are more than two authors, 'et al.' is used.
+
+% TODO FINAL: Replace with your institution list.
+\institute{Princeton University, Princeton NJ 08544, USA \and
+Springer Heidelberg, Tiergartenstr.~17, 69121 Heidelberg, Germany
+\email{lncs@springer.com}\\
+\url{http://www.springer.com/gp/computer-science/lncs} \and
+ABC Institute, Rupert-Karls-University Heidelberg, Heidelberg, Germany\\
+\email{\{abc,lncs\}@uni-heidelberg.de}}
+
+\maketitle
+
+
+\begin{abstract}
+  The abstract should summarize the contents of the paper. 
+  LNCS guidelines indicate it should be at least 70 and at most 150 words.
+  Please include keywords as in the example below. 
+  This is required for papers in LNCS proceedings.
+  \keywords{First keyword \and Second keyword \and Third keyword}
+\end{abstract}
+
+
+\section{Introduction}
+This document serves as an example submission to ECCV \ECCVyear{}.
+It illustrates the format we expect authors to follow when submitting a paper. 
+At the same time, it gives details on various aspects of paper submission, including preservation of anonymity and how to deal with dual submissions.
+We advise authors to read this document carefully.
+
+The document is based on ECCV policies, established over the years, as well as on Springer LNCS instructions.
+
+\section{Initial Submission}
+
+\subsection{Language}
+All manuscripts must be in English.
+
+
+\subsection{Template}
+Papers must be prepared with the official LNCS style from Springer.
+This applies to both review and camera-ready versions.
+Springer requires manuscripts to be prepared in \LaTeX{} (strongly encouraged) or Microsoft Word. 
+
+Authors should use the \LaTeX{} template provided by ECCV, which is based on the corresponding Springer class file \texttt{llncs.cls} but includes line numbers for review (\cref{sec:line-numbering}) and properly anonymizes the paper for review (as in this example document).
+Authors who -- for whatever reason -- cannot use \LaTeX{} can alternatively use the official LNCS Word template from Springer.
+However, it is the authors' responsibility to ensure that the resulting PDF file is consistent with this example paper (\ie, includes line numbers, is properly anonymized, \etc).
+
+We would like to stress that the class/style files and the template should not be manipulated and that the guidelines regarding font sizes and format should be adhered to. 
+For example, please refrain from using any \LaTeX{} or \TeX{} command that modifies the layout settings of the template (\eg, \verb+\textheight+, \verb+\vspace+, \verb+\baselinestretch+, \etc).
+Such manual layout adjustments should be limited to very exceptional cases.
+This is to ensure that the end product is as homogeneous as possible.
+
+Papers that differ significantly from the required style may be rejected without review.
+
+
+\subsubsection{Fonts.}
+Springer's templates for \LaTeX{} are based on CMR, and the XML templates for Word are based on Times. 
+We ask you to use the font according to the template used for your papers. 
+Specifically, please refrain from using Times when preparing your paper with \LaTeX{}.
+Using a different font can be interpreted as purposely circumventing the length limitations and may lead to rejection without review.
+
+
+\subsection{Paper Length}
+Papers submitted for review should be complete. 
+The length should match that intended for final publication. 
+Papers accepted for the conference will be allocated 14 pages (plus additional pages for references) in the proceedings. 
+Note that the allocated 14 pages do not include the references. 
+The reason for this policy is that we do not want authors to omit references for sake of space limitations.
+
+Papers with more than 14 pages (excluding references) will be rejected without review.
+This includes papers where the margins and formatting including the font are deemed to have been significantly altered from those laid down by this style guide.
+
+The reason such papers will not be reviewed is that there is no provision for supervised revisions of manuscripts. 
+The reviewing process cannot determine the suitability of the paper for presentation in 14 pages if it is reviewed in 16.
+
+
+\subsection{Paper ID}
+It is imperative that the paper ID is mentioned on each page of the manuscript of the review version.
+Enter your paper ID in the appropriate place in the \LaTeX{} template (see \texttt{\%TODO REVIEW}).
+The paper ID is a number automatically assigned to your submission when registering your paper submission on the submission site.
+
+
+\subsection{Line Numbering}
+\label{sec:line-numbering}
+All lines should be numbered in the initial submission, as in this example document. 
+This makes reviewing more efficient, because reviewers can refer to a line on a page. 
+Line numbering is removed in the camera-ready version.
+
+
+\section{Policies}
+To avoid confusion, in case of discrepancies between policies mentioned here and those in the ECCV \ECCVyear{} webpage, the webpage is the one that is updated regularly and its policies shall overrule those appearing here. 
+
+
+\subsection{Review Process}
+By submitting a paper to ECCV \ECCVyear{}, the authors agree to the review process and understand that papers are processed by the Toronto Paper Matching System (TPMS) as well as OpenReview to match each manuscript to the best possible area chairs and reviewers.
+
+
+\subsection{Confidentiality}
+The review process of ECCV \ECCVyear{} is confidential. 
+Reviewers are volunteers not part of the ECCV organisation and their efforts are greatly appreciated. 
+The standard practice of keeping all information confidential during the review is part of the standard communication to all reviewers. 
+\textcolor{red}{This also means that reviewers are not allowed to submit the paper under review to a large language model as this may leak information on the paper.}
+Misuse of confidential information is a severe professional failure and appropriate measures will be taken when brought to the attention of ECCV organizers. 
+It should be noted, however, that the organisation of ECCV is not and cannot be held responsible for the consequences when reviewers break confidentiality.
+
+Accepted papers will be published by Springer (with appropriate copyrights) electronically up to \textcolor{red}{three weeks prior} to the main conference.
+Please make sure to discuss this issue with your legal advisors as it pertains to public disclosure of the contents of the papers submitted.
+
+
+\subsection{\textcolor{red}{Dual and Double Submissions}}
+By submitting a manuscript to ECCV \ECCVyear{}, the authors acknowledge that it has not been previously published or accepted for publication in substantially similar form in any peer-reviewed venue including journal, conference, or workshop. 
+Furthermore, no paper substantially similar in content has been or will be submitted to a journal, another conference or workshop during the review period (March 07, 2024 -– July 1, 2024). 
+The authors also attest that they did not submit substantially similar submissions to ECCV \ECCVyear{}. 
+Violation of any of these conditions will lead to rejection and the violation will be reported to the other venue or journal, which will typically lead to rejection there as well. 
+
+The goals of the dual submission policy are (i) to have exciting new work be published for the first time at ECCV \ECCVyear{}, and (ii) to avoid duplicating the efforts of the reviewers.
+Therefore, all papers under review are checked for dual submissions and this is not allowed, independent of the page size of submissions. 
+
+For already published papers, our policy is based upon the following particular definition of ``publication''. 
+A publication, for the purposes of the dual submission policy, is defined to be a written work longer than four pages that was submitted for review by peers for either acceptance or rejection, and, after review, was accepted. 
+In particular, this definition of publication does not depend upon whether such an accepted written work appears in a formal proceedings or whether the organizers declare that such work ``counts as a publication''. 
+
+An arXiv paper does not count as a publication because it was not peer-reviewed for acceptance. 
+The same is true for university technical reports. 
+However, this definition of publication does include peer-reviewed workshop papers, even if they do not appear in a proceedings, if their length is more than 4 pages including citations. 
+Given this definition, any submission to ECCV \ECCVyear{} should not have substantial overlap with prior publications or other concurrent submissions. 
+As a rule of thumb, the ECCV \ECCVyear{} submission should contain no more than 20 percent of material from previous publications. 
+
+
+\subsection{Requirements for Publication}
+Publication of the paper in the ECCV \ECCVyear{} proceedings of Springer requires that at least one of the authors registers for the conference \textcolor{red}{at the full rate} and present the paper there. 
+It also requires that a camera-ready version that satisfies all requirements including formatting is submitted before the camera-ready deadline. 
+
+
+\subsection{Double Blind Review}
+\label{sec:blind}
+ECCV reviewing is double blind, in that authors do not know the names of the area chair/reviewers of their papers, and the area chairs/reviewers cannot, beyond reasonable doubt, infer the names of the authors from the submission and the additional material. 
+Do not provide links to websites that identify the authors.
+If you need to cite a different paper of yours that is being submitted concurrently to ECCV, the authors should (1) cite these papers, (2) argue in the body of your paper why your ECCV paper is non trivially different from these concurrent submissions, and (3) include anonymized versions of those papers in the supplemental material.
+Violation of any of these guidelines may lead to rejection without review. 
+
+Many authors misunderstand the concept of anonymizing for blind review.
+Blind review does not mean that one must remove citations to one's own work---in fact it is often impossible to review a paper unless the previous citations are known and available.
+
+Blind review means that you do not use the words ``my'' or ``our'' when citing previous work.
+That is all.
+(But see below for tech reports.)
+
+Saying ``this builds on the work of Lucy Smith [1]'' does not say that you are Lucy Smith;
+it says that you are building on her work.
+If you are Smith and Jones, do not say ``as we show in [7]'', say ``as Smith and Jones show in [7]'' and at the end of the paper, include reference 7 as you would any other cited work.
+
+An example of a bad paper just asking to be rejected:
+\begin{quote}
+  \begin{center}
+      An analysis of the frobnicatable foo filter.
+  \end{center}
+
+   In this paper we present a performance analysis of our previous paper [1], and show it to be inferior to all previously known methods.
+   Why the previous paper was accepted without this analysis is beyond me.
+
+   [1] Removed for blind review
+\end{quote}
+
+An example of an acceptable paper:
+\begin{quote}
+  \begin{center}
+     An analysis of the frobnicatable foo filter.
+  \end{center}
+
+   In this paper we present a performance analysis of the  paper of Smith \etal [1], and show it to be inferior to all previously known methods.
+   Why the previous paper was accepted without this analysis is beyond me.
+
+   [1] Smith, L and Jones, C. ``The frobnicatable foo filter, a fundamental contribution to human knowledge''. Nature 381(12), 1-213.
+\end{quote}
+
+If you are making a submission to another conference at the same time, which covers similar or overlapping material, you may need to refer to that submission in order to explain the differences, just as you would if you had previously published related work.
+In such cases, include the anonymized parallel submission~\cite{Authors14} as supplemental material and cite it as
+\begin{quote}
+  [1] Authors. ``The frobnicatable foo filter'', BMVS 2014 Submission ID 324, Supplied as supplemental material {\tt bmvc324.pdf}.
+\end{quote}
+
+Finally, you may feel you need to tell the reader that more details can be found elsewhere, and refer them to a technical report.
+For conference submissions, the paper must stand on its own, and not \emph{require} the reviewer to go to a tech report for further details.
+Thus, you may say in the body of the paper ``further details may be found in~\cite{Authors14b}''.
+Then submit the tech report as supplemental material.
+Again, you may not assume the reviewers will read this material.
+
+Sometimes your paper is about a problem which you tested using a tool that is widely known to be restricted to a single institution.
+For example, let's say it's 1969, you have solved a key problem on the Apollo lander, and you believe that the ECCV audience would like to hear about your
+solution.
+The work is a development of your celebrated 1968 paper entitled ``Zero-g frobnication: How being the only people in the world with access to the Apollo lander source code makes us a wow at parties'', by Zeus \etal.
+
+You can handle this paper like any other.
+Do not write ``We show how to improve our previous work [Anonymous, 1968].
+This time we tested the algorithm on a lunar lander [name of lander removed for blind review]''.
+That would be silly, and would immediately identify the authors.
+Instead write the following:
+\begin{quotation}
+   We describe a system for zero-g frobnication.
+   This system is new because it handles the following cases:
+   A, B.  Previous systems [Zeus et al. 1968] did not  handle case B properly.
+   Ours handles it by including a foo term in the bar integral.
+
+   ...
+
+   The proposed system was integrated with the Apollo lunar lander, and went all the way to the moon, don't you know.
+   It displayed the following behaviours, which show how well we solved cases A and B: ...
+\end{quotation}
+As you can see, the above text follows standard scientific convention, reads better than the first version, and does not explicitly name you as the authors.
+A reviewer might think it likely that the new paper was written by Zeus \etal, but cannot make any decision based on that guess.
+He or she would have to be sure that no other authors could have been contracted to solve problem B.
+
+For sake of anonymity, authors must omit acknowledgements in the review copy. 
+They can be added later when you prepare the final copy.
+
+
+\subsection*{FAQ}
+\begin{description}
+  \item[Q:] Are acknowledgements OK?
+  \item[A:] No.  Leave them for the final copy.
+  \medskip
+  \item[Q:] How do I cite my results reported in open challenges?
+  \item[A:] To conform with the double-blind review policy, you can report results of other challenge participants together with your results in your paper.
+    For your results, however, you should not identify yourself and should not mention your participation in the challenge.
+    Instead present your results referring to the method proposed in your paper and draw conclusions based on the experimental comparison to other results.
+\end{description}
+
+
+\section{Formatting Guidelines}
+
+\subsection{Headings}
+Headings should be capitalized (\ie, nouns, verbs, and all other words except articles, prepositions, and conjunctions should be set with an initial capital) and should, with the exception of the title, be aligned to the left.
+Only the first two levels of section headings should be numbered, as shown in Table \cref{tab:headings}.
+The respective font sizes are also given in Table \cref{tab:headings}. 
+Kindly refrain from using ``0'' when numbering your section headings.
+Words joined by a hyphen are subject to a special rule. 
+If the first word can stand alone, the second word should be capitalized.
+
+\begin{table}[tb]
+  \caption{Font sizes of headings. 
+    Table captions should always be positioned \emph{above} the tables.
+  }
+  \label{tab:headings}
+  \centering
+  \begin{tabular}{@{}lll@{}}
+    \toprule
+    Heading level & Example & Font size and style\\
+    \midrule
+    Title (centered)  & {\Large\bf Lecture Notes \dots} & 14 point, bold\\
+    1st-level heading & {\large\bf 1 Introduction} & 12 point, bold\\
+    2nd-level heading & {\bf 2.1 Printing Area} & 10 point, bold\\
+    3rd-level heading & {\bf Headings.} Text follows \dots & 10 point, bold\\
+    4th-level heading & {\it Remark.} Text follows \dots & 10 point, italic\\
+  \bottomrule
+  \end{tabular}
+\end{table}
+
+Here are some examples of headings: 
+``Criteria to Disprove Context-Freeness of Collage Languages'', ``On Correcting the Intrusion of Tracing Non-deterministic Programs by Software'', ``A User-Friendly and Extendable Data Distribution System'', ``Multi-flip Networks: Parallelizing GenSAT'', ``Self-determinations of Man''.
+
+
+\subsection{Figures}
+\label{sect:figures}
+For \LaTeX{} users we recommend integrating figures in your paper using the package \texttt{graphicx}.
+
+It is essential that all illustrations are clear and legible. 
+Vector graphics (rather than rasterized images) should be used for diagrams and schemas whenever possible. 
+Please check that the lines in line drawings are not interrupted and have a constant width. 
+Line drawings are to have a resolution of at least 800 dpi (preferably 1200 dpi).
+Grids and details within figures must be clearly legible and may not be written one on top of the other. 
+The lettering in figures should not use font sizes smaller than 6 pt ($\sim$2 mm character height). 
+
+Figures should be numbered and should have a caption which should always be positioned \emph{under} the figures, in contrast to the caption belonging to a table, which should always appear \emph{above} the table.
+Figures and Tables should be cross referred in the text.
+
+If they are short, they are centered between the margins (\cf \cref{fig:short}). 
+Longer captions, covering more than one line, are justified (\cref{fig:example} shows an example). 
+Captions that do not constitute a full sentence, do not have a period.
+
+
+\begin{figure}[tb]
+  \centering
+  \includegraphics[height=6.5cm]{eijkel2}
+  \caption{One kernel at $x_s$ (\emph{dotted kernel}) or two kernels at $x_i$ and $x_j$ (\emph{left and right}) lead to the same summed estimate at $x_s$.
+    This shows a figure consisting of different types of lines.
+    Elements of the figure described in the caption should be set in italics, in parentheses, as shown in this sample caption. 
+    The last sentence of a figure caption should generally end without a full stop
+  }
+  \label{fig:example}
+\end{figure}
+
+\begin{figure}[tb]
+  \centering
+  \begin{subfigure}{0.68\linewidth}
+    \fbox{\rule{0pt}{2in} \rule{.9\linewidth}{0pt}}
+    \caption{An example of a subfigure}
+    \label{fig:short-a}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}{0.28\linewidth}
+    \fbox{\rule{0pt}{2in} \rule{.9\linewidth}{0pt}}
+    \caption{Another example of a subfigure}
+    \label{fig:short-b}
+  \end{subfigure}
+  \caption{Centered, short example caption}
+  \label{fig:short}
+\end{figure}
+
+If possible (\eg, if you use \LaTeX) please define figures as floating objects. 
+\LaTeX{} users, please avoid using the location parameter ``h'' for ``here''. 
+If you have to insert a pagebreak before a figure, please ensure that the previous page is completely filled.
+
+
+\subsection{Formulas}
+Displayed equations or formulas are centered and set on a separate line (with an extra line or half line space above and below). 
+Equations should be numbered for reference. 
+The numbers should be consecutive within the contribution, with numbers enclosed in parentheses and set on the right margin.
+For example,
+\begin{align}
+  \psi (u) & = \int_{0}^{T} \left[\frac{1}{2}
+  \left(\Lambda_{0}^{-1} u,u\right) + N^{\ast} (-u)\right] dt \; \\
+& = 0
+\end{align}
+and 
+\begin{equation}
+  E = m\cdot c^2.
+  \label{eq:important}
+\end{equation}
+Please do not include section counters in the numbering.
+
+Numbering equations makes reviewing more efficient, because reviewers can refer to a line on a page.  
+It is important for readers to be able to refer to any particular equation.
+Just because you did not refer to it in the text does not mean some future reader might not need to refer to it.
+It is cumbersome to have to use circumlocutions like ``the equation second from the top of page 3 column 1''.
+(Note that the ruler will not be present in the final copy, so is not an alternative to equation numbers).
+All authors will benefit from reading Mermin's description of how to write mathematics:
+\url{http://www.pamitc.org/documents/mermin.pdf}.
+
+Equations should never be in color and should be punctuated in the same way as ordinary text. 
+They should not be pasted in as figures.
+
+
+\subsubsection{Lemmas, Propositions, and Theorems.}
+The numbers accorded to lemmas, propositions, and theorems, \etc should appear in consecutive order, starting with Lemma 1. 
+Please do not include section counters in the numbering like ``Theorem 1.1''.
+
+
+\subsection{Footnotes.}
+The superscript numeral used to refer to a footnote appears in the text either directly after the word to be discussed or -- in relation to a phrase or a sentence -- following the punctuation mark (comma, semicolon, or period).%
+\footnote{The footnote numeral is set flush left and the text follows with the usual word spacing. 
+  Second and subsequent lines are indented. 
+}
+For remarks pertaining to the title or the authors' names, in the header of a paper, symbols should be used instead of a number (see first page of this document). 
+Please note that no footnotes may be included in the abstract.
+
+
+\subsection{Cross-References}
+For the benefit of author(s) and readers, please use the
+{\small
+  \begin{verbatim}
+    \cref{...}
+  \end{verbatim}
+}
+command for cross-referencing to figures, tables, equations, or sections.
+This will automatically insert the appropriate label alongside the cross-reference as in this example:
+\begin{quotation}
+  To see how our method outperforms previous work, please see \cref{fig:example} and \cref{tab:headings}.
+  It is also possible to refer to multiple targets as once, \eg~to \cref{fig:example,fig:short-a}.
+  You may also return to \cref{sec:manuscript} or look at \cref{eq:important}.
+\end{quotation}
+If you do not wish to abbreviate the label, for example at the beginning of the sentence, you can use the
+{\small
+  \begin{verbatim}
+    \Cref{...}
+  \end{verbatim}
+}
+command. Here is an example:
+\begin{quotation}
+  \Cref{fig:example} is also quite important.
+\end{quotation}
+
+
+\subsection{Program Code}
+Program listings or program commands in the text are normally set in typewriter font.
+
+
+\subsection{Citations}
+Arabic numbers are used for citation, which is sequential either by order of citation or by alphabetical order of the references, depending on which sequence is used in the list of references. 
+The reference numbers are given in brackets and are not superscript.
+Please observe the following guidelines:
+\begin{itemize}
+\item Single citation: \cite{Authors14}
+\item Multiple citation: \cite{Alpher02,Alpher03,Alpher05,Authors14b,Authors14}. 
+  The numbers should be listed in numerical order.
+  If you use the template as advised, this will be taken care of automatically.
+\item If an author's name is used in the text: Alpher \cite{Alpher02} was the first \ldots
+\end{itemize}
+Please write all references using the Latin alphabet. If the title of the book you are referring to is, \eg, in Russian or Chinese, then please write (in Russian) or (in Chinese) at the end of the transcript or translation of the title.
+All references cited in the text should be in the list of references and vice versa.
+
+
+\subsection{Miscellaneous}
+Compare the following:
+\begin{center}
+  \begin{tabular}{ll}
+    \verb'$conf_a$'          & $\qquad conf_a$ \\
+    \verb'$\mathit{conf}_a$' & $\qquad \mathit{conf}_a$
+  \end{tabular}
+\end{center}
+See The \TeX book, p165.
+
+The space after \eg, meaning ``for example'', should not be a sentence-ending space.
+So \eg is correct, {\em e.g.} is not.
+The provided \verb'\eg' macro takes care of this.
+
+When citing a multi-author paper, you may save space by using ``et alia'', shortened to ``\etal'' (not ``{\em et.\ al.}'' as ``{\em et}'' is a complete word).
+If you use the \verb'\etal' macro provided, then you need not worry about double periods when used at the end of a sentence as in Alpher \etal.
+However, use it only when there are three or more authors.
+Thus, the following is correct:
+   ``Frobnication has been trendy lately.
+   It was introduced by Alpher~\cite{Alpher02}, and subsequently developed by
+   Alpher and Fotheringham-Smythe~\cite{Alpher03}, and Alpher \etal~\cite{Alpher04}.''
+
+This is incorrect: ``... subsequently developed by Alpher \etal~\cite{Alpher03} ...'' because reference~\cite{Alpher03} has just two authors.
+
+
+\section{Camera-Ready Manuscript Preparation}
+\label{sec:manuscript}
+
+Please use the same template as for the review version and follow the general instructions above.
+Here, we only specify deviating requirements or details that are of lesser importance for the review version.
+
+Springer aims to publish all proceedings papers in full-text XML. 
+To do so, Springer needs all source files (\LaTeX{} files with all the associated style files, underlying \texttt{.bib} file for the references, special fonts and PDF/EPS files, or Word or RTF files) and the PDFs of the paper. 
+
+\subsection{Fonts and Paper Length}
+The same font and length guidelines apply as for the submission.
+Papers using other fonts will be converted by Springer's typesetters.
+
+\subsection{Camera-Ready Formatting Details}
+In the printed volumes, illustrations are generally black and white (half-tones). 
+Colored pictures are welcome in the electronic version free of charge. 
+If you send colored figures that are to be printed in black and white, please make sure that they really are also legible in black and white. 
+Some colors show up very poorly when printed in black and white. 
+Springer does not support color in text, tables or in equations.
+
+Tables and equations need to be included in editable form, and not pasted in as figures, in case your paper needs to be reformatted or corrections made.
+
+
+\subsection{Citations and References}
+The same citation and reference style as for the review version should be used. 
+In order to permit cross referencing within SpringerLink, and between different publishers and their online databases, Springer standardizes the format of the references according to the requirements for CrossRef (\url{http://www.crossref.org/}).
+If more than six authors are listed in one particular reference, this will be shortened and ``\etal'' will be inserted.
+The reference section is included in the metadata of the paper on SpringerLink, increasing the visibility of the referenced papers and facilitating research considerably.
+
+Springer strongly encourages you to include DOIs (Digital Object Identifiers) in your references. 
+The DOI is a unique code allotted by the publisher to each online paper or journal article. 
+It provides a stable way of finding published papers and their metadata. 
+The insertion of DOIs increases the overall length of the references section.
+
+
+\subsection{Affiliations, Email-Addresses, and ORCIDs (for camera-ready only).}
+The affiliated institutions, including town/city and country, are to be listed directly below the names of the authors.
+Multiple affiliations should be marked with superscript Arabic numbers, and they should each start on a new line. 
+We encourage authors to insert their ORCIDs in superscript next to their names (please see the \LaTeX{} and Springer's Word templates for examples).
+The corresponding author, \ie, the author responsible for checking the final proof and for signing the license-to-publish agreement on behalf of all of the authors, should be clearly marked in the header of the paper. 
+It is the responsibility of the corresponding author to ensure that questions related to the accuracy or integrity of any part of the work are appropriately addressed. 
+The inclusion of the corresponding author’s email address is mandatory. 
+In order to streamline communication during the publication process, there should not be more than one corresponding author per paper.
+We strongly recommend that all authors include their email addresses in their papers. 
+These are used by Springer to send an email containing a coded personal access link, enabling authors to download a PDF of their paper from SpringerLink.
+
+
+\section{Submitting a Camera-Ready for an Accepted Paper}
+\subsection{Converting Initial Submission to Camera-Ready}
+To convert a submission file into a camera-ready for an accepted paper:
+\begin{enumerate}
+    \item First comment out 
+          \begin{verbatim}
+            \usepackage[review,year=2024,ID=...]{eccv}
+          \end{verbatim} and un-comment the line
+          \begin{verbatim}
+            \usepackage{eccv}
+          \end{verbatim}
+    \item The author and institution information must be entered into the appropriate fields.
+          These are marked in the source file as
+          \begin{verbatim}
+            % TODO FINAL
+          \end{verbatim}
+    \item Please write out author names in full in the paper, \ie full given and family names. 
+          If any authors have names that can be parsed into FirstName LastName in multiple ways, please include the correct parsing in a comment to the editors, below the \begin{verbatim}\author{}\end{verbatim} field.
+    \item Make sure you have inserted the proper Acknowledgments.
+  \end{enumerate}  
+ 
+\subsection{Preparing the Submission Package}
+We need all the source files (\LaTeX{} files, style files, special fonts, figures, bib-files) that are required to compile papers, as well as the camera ready PDF. 
+For each paper, one ZIP-file called XXXXX.ZIP (where XXXXX is the zero-padded, give-digit paper ID) has to be prepared and submitted via the ECCV \ECCVyear{} Submission Website, using the password you received with your initial registration on that site. 
+The size of the ZIP-file may not exceed the limit of \textcolor{red}{50 MByte}. 
+The ZIP-file has to contain the following:
+  \begin{enumerate}
+ \item All source files, \eg \LaTeX{}2$_\varepsilon$ files for the text, PS/EPS or PDF/JPG files for all figures.
+ \item PDF file named ``XXXXX.pdf" that has been produced by the submitted source, where XXXXX is the give-digit paper ID (zero-padded if necessary). For example, if your paper ID is 24, the filename must be 00024.pdf. 
+       This PDF will be used as a reference and has to exactly match the output of the compilation.
+ \item PDF file named ``XXXXX-copyright.PDF": a scanned version of the signed copyright form (see ECCV \ECCVyear{} Website, Camera Ready Guidelines for the correct form to use). 
+ \item If you wish to provide supplementary material, the file name must be in the form XXXXX-supp.pdf or XXXXX-supp.zip, where XXXXX is the zero-padded, five-digit paper ID as used in the previous step. 
+       Upload your supplemental file on the ``File Upload" page as a single PDF or ZIP file of 100 MB in size or less. 
+       Only PDF and ZIP files are allowed for supplementary material. 
+       You can put anything in this file -- movies, code, additional results, accompanying technical reports -- anything that may make your paper more useful to readers.  
+       If your supplementary material includes video or image data, you are advised to use common codecs and file formats.  
+       This will make the material viewable by the largest number of readers (a desirable outcome). 
+       ECCV encourages authors to submit videos using an MP4 codec (H.264 or H.265). 
+       Also, please submit a README text file with each video specifying the exact codec used and a URL where the codec can be downloaded. 
+       Authors should refer to the contents of the supplementary material appropriately in the paper.
+ \end{enumerate}
+
+Check that the upload of your file (or files) was successful either by matching the file length to that on your computer, or by using the download options that will appear after you have uploaded. 
+Please ensure that you upload the correct camera-ready PDF–renamed to XXXXX.pdf as described in the previous step as your camera-ready submission. 
+Every year there is at least one author who accidentally submits the wrong PDF as their camera-ready submission.
+
+Further considerations for preparing the camera-ready package:
+  \begin{enumerate}
+    \item Make sure to include any further style files and fonts you may have used.
+    \item References are to be supplied as BBL files to avoid omission of data while conversion from BIB to BBL.
+    \item Please do not send any older versions of papers. 
+          There should be one set of source files and one XXXXX.pdf file per paper. 
+          Our typesetters require the author-created pdfs in order to check the proper representation of symbols, figures, etc.
+    \item Please remove unnecessary files (such as eijkel2.pdf and eijkel2.eps) from the source folder. 
+    \item You may use sub-directories.
+    \item Make sure to use relative paths for referencing files.
+    \item Make sure the source you submit compiles.
+\end{enumerate}
+
+Springer is the first publisher to implement the ORCID identifier for proceedings, ultimately providing authors with a digital identifier that distinguishes them from every other researcher. 
+ORCID (Open Researcher and Contributor ID) hosts a registry of unique researcher identifiers and a transparent method of linking research activities to these identifiers. 
+This is achieved through embedding ORCID identifiers in key workflows, such as research profile maintenance, manuscript submissions, grant applications and patent applications.
+
+\subsection{Most Frequently Encountered Issues}
+Please kindly use the checklist below to deal with some of the most frequently encountered issues in ECCV submissions.
+
+\paragraph{FILES:}
+\begin{itemize}
+  \item My submission package contains ONE compiled pdf file for the camera-ready version to go on Springerlink.
+  \item I have ensured that the submission package has all the additional files necessary for compiling the pdf on a standard LaTeX distribution.
+  \item I have used the correct copyright form (with editor names pre-printed), and a signed pdf is included in the zip file with the correct file name.
+\end{itemize}
+
+\paragraph{CONTENT:}
+\begin{itemize}
+  \item I have removed all \verb| \vspace| and \verb|\hspace|  commands from my paper.
+  \item I have not used \verb|\thanks|  or \verb|\footnote|  commands and symbols for corresponding authors in the title (which is processed with scripts) and (optionally) used an Acknowledgement section for all the acknowledgments, at the end of the paper.
+  \item I have not used \verb|\cite| command in the abstract.
+  \item I have read the Springer author guidelines, and complied with them, including the point on providing full information on editors and publishers for each reference in the paper (Author Guidelines – Section 2.8).
+  \item I have entered a correct \verb|\titlerunning{}| command and selected a meaningful short name for the paper.
+  \item I have entered \verb|\index{Lastname,Firstname}| commands for names that are longer than two words.
+  \item I have used the same name spelling in all my papers accepted to ECCV and ECCV Workshops.
+  \item I have inserted the ORCID identifiers of the authors in the paper header (see http://bit.ly/2H5xBpN for more information).
+  \item I have not decreased the font size of any part of the paper (except tables) to fit into 14 pages, I understand Springer editors will remove such commands.
+\end{itemize}
+
+\paragraph{SUBMISSION:}
+\begin{itemize}
+  \item All author names, titles, and contact author information are correctly entered in the submission site.
+  \item The corresponding author e-mail is given.
+  \item At least one author has registered by the camera ready deadline.
+\end{itemize}
+
+
+\section{Conclusions}
+The paper ends with a conclusion. 
+
+%\clearpage\mbox{}Page \thepage\ of the manuscript.
+
+This is the last page of the manuscript.
+\par\vfill\par
+Now we have reached the maximum size of the ECCV \ECCVyear{} submission (excluding references).
+References should start immediately after the main text, but can continue past p.~14 if needed.
+
+% ---- Bibliography ----
+%
+% BibTeX users should specify bibliography style 'splncs04'.
+% References will then be sorted and formatted in the correct style.
+%
+\bibliographystyle{splncs04}
+\bibliography{egbib}
+\end{document}
