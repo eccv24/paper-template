@@ -10,7 +10,7 @@
 %\usepackage{eccv}
 
 % OPTIONAL: Un-comment the following line for a version which is easier to read
-% on small portrait-orientation screens (e.g. mobile phones, or beside other windows)
+% on small portrait-orientation screens (e.g., mobile phones, or beside other windows)
 %\usepackage[mobile]{eccv}
 
 
@@ -91,6 +91,8 @@ ABC Institute, Rupert-Karls-University Heidelberg, Heidelberg, Germany\\
 
 
 \section{Introduction}
+\label{sec:intro}
+
 This document serves as an example submission to ECCV \ECCVyear{}.
 It illustrates the format we expect authors to follow when submitting a paper. 
 At the same time, it gives details on various aspects of paper submission, including preservation of anonymity and how to deal with dual submissions.
@@ -175,7 +177,7 @@ Accepted papers will be published by Springer (with appropriate copyrights) elec
 Please make sure to discuss this issue with your legal advisors as it pertains to public disclosure of the contents of the papers submitted.
 
 
-\subsection{\textcolor{red}{Dual and Double Submissions}}
+\subsection{Dual and Double Submissions}
 By submitting a manuscript to ECCV \ECCVyear{}, the authors acknowledge that it has not been previously published or accepted for publication in substantially similar form in any peer-reviewed venue including journal, conference, or workshop. 
 Furthermore, no paper substantially similar in content has been or will be submitted to a journal, another conference, or workshop during the review period (March 07, 2024 -- July 1, 2024). 
 The authors also attest that they did not submit substantially similar submissions to ECCV \ECCVyear{}. 
@@ -434,7 +436,7 @@ This will automatically insert the appropriate label alongside the cross referen
 \begin{quotation}
   To see how our method outperforms previous work, please see \cref{fig:example} and \cref{tab:headings}.
   It is also possible to refer to multiple targets as once, \eg~to \cref{fig:example,fig:short-a}.
-  You may also return to \cref{sec:manuscript} or look at \cref{eq:important}.
+  You may also return to \cref{sec:intro} or look at \cref{eq:important}.
 \end{quotation}
 If you do not wish to abbreviate the label, for example at the beginning of the sentence, you can use the
 \begin{verbatim}
@@ -464,6 +466,13 @@ Please observe the following guidelines:
 Please write all references using the Latin alphabet. If the title of the book you are referring to is, \eg, in Russian or Chinese, then please write (in Russian) or (in Chinese) at the end of the transcript or translation of the title.
 All references cited in the text should be in the list of references and vice versa.
 
+References should be formatted with the official LNCS reference style.
+The \LaTeX{} template already takes care of that through the use of the \texttt{splncs04.bst} Bib\TeX{} style file.
+Springer strongly encourages you to include DOIs (Digital Object Identifiers) in your references (\cf \cite{ECCV2022}). 
+The DOI is a unique code allotted by the publisher to each online paper or journal article. 
+It provides a stable way of finding published papers and their metadata. 
+The insertion of DOIs increases the overall length of the references section, but this should not concern you as the reference section is not counted toward the page limit.
+
 
 \subsection{Miscellaneous}
 Compare the following:
@@ -491,156 +500,18 @@ Thus, the following is correct:
 This is incorrect: ``... subsequently developed by Alpher \etal~\cite{Alpher03} ...'' because reference~\cite{Alpher03} has just two authors.
 
 
-\section{Camera-Ready Manuscript Preparation}
-\label{sec:manuscript}
-
-Please use the same template as for the review version and follow the general instructions above.
-Here, we only specify deviating requirements or details that are of lesser importance for the review version.
-
-Springer aims to publish all proceedings papers in full-text XML. 
-To do so, Springer needs all source files (\LaTeX{} files with all the associated style files, underlying \texttt{.bib} file for the references, special fonts, and PDF/EPS/JPG/PNG files for the figures, or Word/RTF files) and the PDFs of the paper. 
-
-\subsection{Fonts and Paper Length}
-The same font and length guidelines apply as for the submission.
-Papers using other fonts will be converted by Springer's typesetters.
-
-\subsection{Camera-Ready Formatting Details}
-In the printed volumes, illustrations are generally black and white (half-tones). 
-Colored pictures are welcome in the electronic version free of charge. 
-If you send colored figures that are to be printed in black and white, please make sure that they really are also legible in black and white. 
-Some colors show up very poorly when printed in black and white. 
-Springer does not support color in text, tables, or in equations.
-
-Tables and equations need to be included in editable form, and not pasted in as figures, in case your paper needs to be reformatted or corrections made.
-
-
-\subsection{Citations and References}
-The same citation and reference style as for the review version should be used. 
-In order to permit cross-referencing within SpringerLink, and between different publishers and their online databases, Springer standardizes the format of the references according to the requirements for CrossRef (\url{http://www.crossref.org/}).
-If more than six authors are listed in one particular reference, this will be shortened and ``\etal'' will be inserted.
-The reference section is included in the metadata of the paper on SpringerLink, increasing the visibility of the referenced papers and facilitating research considerably.
-
-Springer strongly encourages you to include DOIs (Digital Object Identifiers) in your references (\cf \cite{ECCV2022}). 
-The DOI is a unique code allotted by the publisher to each online paper or journal article. 
-It provides a stable way of finding published papers and their metadata. 
-The insertion of DOIs increases the overall length of the references section, but this should not concern you as the reference section is not counted toward the page limit.
-
-
-\subsection{Affiliations, Email-Addresses, and ORCIDs (for camera-ready only).}
-The affiliated institutions, including town/city and country, are to be listed directly below the names of the authors.
-Multiple affiliations should be marked with superscript Arabic numbers, and they should each start on a new line. 
-We encourage authors to insert their ORCIDs in superscript next to their names (please see the \LaTeX{} and Springer's Word templates for examples).
-The corresponding author, \ie, the author responsible for checking the final proof and for signing the license-to-publish agreement on behalf of all of the authors, should be clearly marked in the header of the paper. 
-It is the responsibility of the corresponding author to ensure that questions related to the accuracy or integrity of any part of the work are appropriately addressed. 
-The inclusion of the corresponding author’s email address is mandatory. 
-In order to streamline communication during the publication process, there should not be more than one corresponding author per paper.
-We strongly recommend that all authors include their email addresses in their papers. 
-These are used by Springer to send an email containing a coded personal access link, enabling authors to download a PDF of their paper from SpringerLink.
-
-
-\section{Submitting a Camera-Ready for an Accepted Paper}
-\subsection{Converting Initial Submission to Camera-Ready}
-To convert a submission file into a camera-ready for an accepted paper:
-\begin{enumerate}
-    \item First comment out 
-          \begin{verbatim}
-            \usepackage[review,year=2024,ID=...]{eccv}
-          \end{verbatim} and un-comment the line
-          \begin{verbatim}
-            \usepackage{eccv}
-          \end{verbatim}
-    \item The author and institution information must be entered into the appropriate fields.
-          These are marked in the source file as
-          \begin{verbatim}
-            % TODO FINAL
-          \end{verbatim}
-    \item Please write out author names in full in the paper, \ie full given and family names. 
-          If any authors have names that can be parsed into FirstName LastName in multiple ways, please include the correct parsing in a comment to the editors, below the \begin{verbatim}\author{}\end{verbatim} field.
-    \item Make sure you have inserted the proper Acknowledgments.
-  \end{enumerate}  
- 
-\subsection{Preparing the Submission Package}
-We need all the source files (\LaTeX{} files, style files, special fonts, figures, bib files) that are required to compile papers, as well as the camera ready PDF. 
-For each paper, one ZIP file called XXXXX.ZIP (where XXXXX is the zero-padded, five-digit paper ID) has to be prepared and submitted via the ECCV \ECCVyear{} Submission Website, using the password you received with your initial registration on that site. 
-The size of the ZIP file may not exceed the limit of \textcolor{red}{50 MByte}. 
-The ZIP file has to contain the following:
-  \begin{enumerate}
- \item All source files, \eg, \LaTeX{}2$_\varepsilon$ files for the text, PS/EPS or PDF/JPG/PNG files for all figures.
- \item PDF file named ``XXXXX.pdf'' that has been produced by the submitted source, where XXXXX is the five-digit paper ID (zero-padded if necessary). For example, if your paper ID is 24, the filename must be 00024.pdf. 
-       This PDF will be used as a reference and has to exactly match the output of the compilation.
- \item PDF file named ``XXXXX-copyright.PDF'': a scanned version of the signed copyright form (see ECCV \ECCVyear{} Website, Camera Ready Guidelines for the correct form to use). 
- \item If you wish to provide supplementary material, the file name must be in the form XXXXX-supp.pdf or XXXXX-supp.zip, where XXXXX is the zero-padded, five-digit paper ID as used in the previous step. 
-       Upload your supplemental file on the ``File Upload'' page as a single PDF or ZIP file of 100 MB in size or less. 
-       Only PDF and ZIP files are allowed for supplementary material. 
-       You can put anything in this file -- movies, code, additional results, accompanying technical reports -- anything that may make your paper more useful to readers.  
-       If your supplementary material includes video or image data, you are advised to use common codecs and file formats.  
-       This will make the material viewable by the largest number of readers (a desirable outcome). 
-       ECCV encourages authors to submit videos using an MP4 codec (H.264 or H.265). 
-       Also, please submit a README text file with each video specifying the exact codec used and a URL where the codec can be downloaded. 
-       Authors should refer to the contents of the supplementary material appropriately in the paper.
- \end{enumerate}
-
-Check that the upload of your file (or files) was successful either by matching the file length to that on your computer, or by using the download options that will appear after you have uploaded. 
-Please ensure that you upload the correct camera-ready PDF (\ie, renamed to XXXXX.pdf) as described in the previous step of your camera-ready submission. 
-Every year there is at least one author who accidentally submits the wrong PDF as their camera-ready submission.
-
-Further considerations for preparing the camera-ready package:
-  \begin{enumerate}
-    \item Make sure to include any further style files and fonts you may have used.
-    \item References are to be supplied as BBL files to avoid omission of data while conversion from BIB to BBL.
-    \item Please do not send any older versions of papers. 
-          There should be one set of source files and one XXXXX.pdf file per paper. 
-          Springer's typesetters require the author-created PDFs in order to check the proper representation of symbols, figures, \etc
-    \item Please remove unnecessary files (such as eijkel2.pdf and eijkel2.eps) from the source folder. 
-    \item You may use sub-directories.
-    \item Make sure to use relative paths for referencing files.
-    \item Make sure the source you submit compiles.
-\end{enumerate}
-
-Springer is the first publisher to implement the ORCID identifier for proceedings, ultimately providing authors with a digital identifier that distinguishes them from every other researcher. 
-ORCID (Open Researcher and Contributor ID) hosts a registry of unique researcher identifiers and a transparent method of linking research activities to these identifiers. 
-This is achieved through embedding ORCID identifiers in key workflows, such as research profile maintenance, manuscript submissions, grant applications, and patent applications.
-
-\subsection{Most Frequently Encountered Issues}
-Please kindly use the checklist below to deal with some of the most frequently encountered issues in ECCV submissions.
-
-\paragraph{FILES:}
-\begin{itemize}
-  \item My submission package contains ONE compiled PDF file for the camera-ready version to go on Springerlink.
-  \item I have ensured that the submission package has all the additional files necessary for compiling the PDF on a standard LaTeX distribution.
-  \item I have used the correct copyright form (with editor names pre-printed), and a signed PDF is included in the ZIP file with the correct file name.
-\end{itemize}
-
-\paragraph{CONTENT:}
-\begin{itemize}
-  \item I have removed all \verb|\vspace| and \verb|\hspace| commands from my paper.
-  \item I have not used \verb|\thanks| or \verb|\footnote| commands and symbols for corresponding authors in the title (which is processed with scripts) and (optionally) used an Acknowledgement section for all the acknowledgments, at the end of the paper.
-  \item I have not used the \verb|\cite| command in the abstract.
-  \item I have read the Springer author guidelines, and complied with them, including the point on providing full information on editors and publishers for each reference in the paper (Author Guidelines – Section 2.8).
-  \item I have entered a correct \verb|\titlerunning{}| command and selected a meaningful short name for the paper.
-  \item I have entered \verb|\index{Lastname,Firstname}| commands for names that are longer than two words.
-  \item I have used the same name spelling in all my papers accepted to ECCV and ECCV Workshops.
-  \item I have inserted the ORCID identifiers of the authors in the paper header (see \url{http://bit.ly/2H5xBpN} for more information).
-  \item I have not decreased the font size of any part of the paper (except tables) to fit into 14 pages; I understand Springer editors will remove such commands.
-\end{itemize}
-
-\paragraph{SUBMISSION:}
-\begin{itemize}
-  \item All author names, titles, and contact author information are correctly entered in the submission site.
-  \item The corresponding author e-mail is given.
-  \item At least one author has registered by the camera-ready deadline.
-\end{itemize}
-
-
-\section{Conclusions}
+\section{Conclusion}
 The paper ends with a conclusion. 
 
-%\clearpage\mbox{}Page \thepage\ of the manuscript.
-
-This is the last page of the manuscript.
+\clearpage\mbox{}Page \thepage\ of the manuscript.
+\clearpage\mbox{}Page \thepage\ of the manuscript.
+\clearpage\mbox{}Page \thepage\ of the manuscript.
+\clearpage\mbox{}Page \thepage\ of the manuscript. This is the last page.
 \par\vfill\par
-Now we have reached the maximum size of the ECCV \ECCVyear{} submission (excluding references).
+Now we have reached the maximum length of an ECCV \ECCVyear{} submission (excluding references).
 References should start immediately after the main text, but can continue past p.\ 14 if needed.
+\clearpage  % TODO REVIEW/FINAL: This \clearpage needs to be removed from both review and camera-ready versions.
+
 
 % ---- Bibliography ----
 %
