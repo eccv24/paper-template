@@ -61,6 +61,8 @@
 \RequirePackage[hyphens]{url}
 \Urlmuskip=0mu plus 1mu\relax
 
+% Color for links and line numbers
+\definecolor{eccvblue}{rgb}{0.12,0.49,0.85}
 
 % ---------------------------------------------------------------
 % Use modern caption package to allow for sub-figures etc.
@@ -150,7 +152,7 @@
 
 
 % colored, bold, sans serif line numbers
-\renewcommand\thelinenumber{\color[rgb]{0.2,0.5,0.8}\normalfont\sffamily\scriptsize\fillzeros[3]{\arabic{linenumber}}\color[rgb]{0,0,0}}
+\renewcommand\thelinenumber{\color{eccvblue}\normalfont\sffamily\scriptsize\fillzeros[3]{\arabic{linenumber}}\color[rgb]{0,0,0}}
 % on both sides
 \renewcommand\makeLineNumber{\hss\thelinenumber\ \hspace{4.5mm} \rlap{\hskip\textwidth\ \hspace{5mm}\thelinenumber}}
 
